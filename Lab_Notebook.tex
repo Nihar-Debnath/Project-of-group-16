@@ -93,10 +93,104 @@ Installing GitHub Desktop is a straightforward process that begins with download
 
 \newpage
 
-\section*{Member 2: [Member 2 Name]}
-\addcontentsline{toc}{section}{Member 2: [Member 2 Name]}
+\section*{Member 2: [Anuksha Sarkar]}
+\addcontentsline{toc}{section}{Member 2: [Anuksha Sarkar]}
 % Lab notebook content for Member 2 goes here
 \date{\today}
+\FloatBarrier 
+\begin{center}
+\section*{\uline{-:What is the purpose of the calculator program:-}}
+\end{center}
+
+\paragraph{}
+The primary purpose of a calculator program is to perform mathematical calculations efficiently and accurately.** It provides a user-friendly interface for entering numbers and operators, and then quickly calculates and displays the result. 
+
+Calculators can range from simple devices that handle basic arithmetic to more advanced ones capable of complex functions like trigonometry, statistics, and even programming. They are widely used in various fields, including education, science, engineering, and everyday life.
+
+
+
+\begin{center}
+\section*{\uline{:Explain the code properly:}}
+\end{center}
+
+\paragraph{}
+
+Purpose:
+This C program is designed to function as a simple calculator, allowing users to perform basic arithmetic operations (addition, subtraction, multiplication, and division).\\
+
+Key Components and Their Functions:\\
+
+1. Header Inclusion:
+   - $#include <stdio.h>$: This includes the standard input/output library, which provides functions like `printf` (for printing output) and `scanf` (for reading input).\\
+
+2. Main Function:
+   - `int main()`: This is the entry point of the program. It's where the execution begins.\\
+
+3. Variable Declarations:
+   - `char operator`: Stores the operator entered by the user (+, -, *, /).
+   - `double num1, num2`: Stores the two numbers entered by the user.
+   - `double result`: Stores the calculated result.\\
+
+4. User Input:
+   - `printf("Enter an operator (+, -, *, /): ");`: Prompts the user to enter an operator.
+   - `scanf("%c", &operator);`: Reads the character entered by the user and stores it in the `operator` variable.
+   - Similar prompts and reads are used for the two numbers.\\
+
+5. Operator Checking and Calculation:
+   - `switch (operator)`: This is a conditional statement that checks the value of the `operator` variable.
+   - `case '+':`, `case '-':`, `case '*':`, `case '/':`: These cases handle different operators.
+   - The respective arithmetic operations are performed based on the operator and the results are stored in the `result` variable.
+   - A check for division by zero is included to prevent errors.\\
+
+6. Output:
+   - `printf("Result: ")\\
+
+Flow of Execution:\\
+
+1. The program starts execution from the `main` function.
+2. The user is prompted to enter an operator.
+3. The entered operator is stored.
+4. The user is prompted to enter two numbers.
+5. The entered numbers are stored.
+6. The `switch` statement checks the operator and performs the corresponding calculation.
+7. The result is printed.
+8. The program ends.\\
+Overall, this code provides a basic calculator functionality by taking user input for an operator and two numbers, performing the calculation based on the operator, and displaying the result.
+
+\begin{center}
+\section*{\uline{:How to use it, what will be the output after program compilation, set an example:}}
+\end{center}
+
+\paragraph{}
+How to Use:\\
+
+1. Compile the code:
+   - Save the code in a `.c` file (e.g., `calculator.c`).
+   - Open a terminal or command prompt.
+   - Navigate to the directory where you saved the file.
+   - Compile the code using a C compiler like GCC:
+     gcc calculator.c -o calculator
+     This will create an executable file named `calculator`.\\
+
+2. Run the program:
+   - Execute the executable file:
+     ./calculator
+
+Example:
+Enter an operator (+, -, *, /): +
+Enter two numbers: 5 3
+Result: 8.00\\
+
+In this example:
+- The user enters `+` as the operator.
+- The user enters `5` and `3` as the numbers.
+- The program calculates `5 + 3` and prints the result `8.00`.\\
+
+Other examples:
+- `-` as the operator: `5 - 3` will result in `2.00`.
+- `*` as the operator: `5 * 3` will result in `15.00`.
+- `/` as the operator: `5 / 3` will result in `1.67`.
+
 \newpage
 
 \section*{Member 3: [Member 3 Name]}
