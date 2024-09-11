@@ -121,25 +121,25 @@ This C program is designed to function as a simple calculator, allowing users to
 Key Components and Their Functions:\\
 
 1. Header Inclusion:
-   - $#include <stdio.h>$: This includes the standard input/output library, which provides functions like `printf` (for printing output) and `scanf` (for reading input).\\
+   - $#include <stdio.h>$: This includes the standard input/output library, which provides functions like printf (for printing output) and scanf (for reading input).\\
 
 2. Main Function:
-   - `int main()`: This is the entry point of the program. It's where the execution begins.\\
+   - int main(): This is the entry point of the program. It's where the execution begins.\\
 
 3. Variable Declarations:
-   - `char operator`: Stores the operator entered by the user (+, -, *, /).
-   - `double num1, num2`: Stores the two numbers entered by the user.
-   - `double result`: Stores the calculated result.\\
+   - char operator: Stores the operator entered by the user (+, -, *, /).
+   - double num1, num2: Stores the two numbers entered by the user.
+   - double result: Stores the calculated result.\\
 
 4. User Input:
-   - `printf("Enter an operator (+, -, *, /): ");`: Prompts the user to enter an operator.
-   - `scanf("%c", &operator);`: Reads the character entered by the user and stores it in the `operator` variable.
+   - printf("Enter an operator (+, -, *, /): ");: Prompts the user to enter an operator.
+   - scanf("%c", &operator);: Reads the character entered by the user and stores it in the operator variable.
    - Similar prompts and reads are used for the two numbers.\\
 
 5. Operator Checking and Calculation:
-   - `switch (operator)`: This is a conditional statement that checks the value of the `operator` variable.
-   - `case '+':`, `case '-':`, `case '*':`, `case '/':`: These cases handle different operators.
-   - The respective arithmetic operations are performed based on the operator and the results are stored in the `result` variable.
+   - switch (operator): This is a conditional statement that checks the value of the operator variable.
+   - case '+':, case '-':, case '*':, case '/':: These cases handle different operators.
+   - The respective arithmetic operations are performed based on the operator and the results are stored in the result variable.
    - A check for division by zero is included to prevent errors.\\
 
 6. Output:
@@ -147,12 +147,12 @@ Key Components and Their Functions:\\
 
 Flow of Execution:\\
 
-1. The program starts execution from the `main` function.
+1. The program starts execution from the main function.
 2. The user is prompted to enter an operator.
 3. The entered operator is stored.
 4. The user is prompted to enter two numbers.
 5. The entered numbers are stored.
-6. The `switch` statement checks the operator and performs the corresponding calculation.
+6. The switch statement checks the operator and performs the corresponding calculation.
 7. The result is printed.
 8. The program ends.\\
 Overall, this code provides a basic calculator functionality by taking user input for an operator and two numbers, performing the calculation based on the operator, and displaying the result.
@@ -165,12 +165,12 @@ Overall, this code provides a basic calculator functionality by taking user inpu
 How to Use:\\
 
 1. Compile the code:
-   - Save the code in a `.c` file (e.g., `calculator.c`).
+   - Save the code in a .c file (e.g., calculator.c).
    - Open a terminal or command prompt.
    - Navigate to the directory where you saved the file.
    - Compile the code using a C compiler like GCC:
      gcc calculator.c -o calculator
-     This will create an executable file named `calculator`.\\
+     This will create an executable file named calculator.\\
 
 2. Run the program:
    - Execute the executable file:
@@ -182,21 +182,68 @@ Enter two numbers: 5 3
 Result: 8.00\\
 
 In this example:
-- The user enters `+` as the operator.
-- The user enters `5` and `3` as the numbers.
-- The program calculates `5 + 3` and prints the result `8.00`.\\
+- The user enters + as the operator.
+- The user enters 5 and 3 as the numbers.
+- The program calculates 5 + 3 and prints the result 8.00.\\
 
 Other examples:
-- `-` as the operator: `5 - 3` will result in `2.00`.
-- `*` as the operator: `5 * 3` will result in `15.00`.
-- `/` as the operator: `5 / 3` will result in `1.67`.
+- - as the operator: 5 - 3 will result in 2.00.
+- * as the operator: 5 * 3 will result in 15.00.
+- / as the operator: 5 / 3 will result in 1.67.
 
 \newpage
 
-\section*{Member 3: [Member 3 Name]}
-\addcontentsline{toc}{section}{Member 3: [Member 3 Name]}
+\section*{Member 3: [Sananda Choudhury]}
+\addcontentsline{toc}{section}{Member 3: [Sananda Choudhury]}
 % Lab notebook content for Member 3 goes here
 \date{\today}
+\FloatBarrier 
+\begin{center}
+\section*{\uline{-:Converting a submit button to "chin tapak dum dum":-}}
+\end{center}
+\paragraph{}
+
+#Steps to Fix the Button and Create a Pull Request\\
+
+1. *Clone the Repository:*
+   - You’ve already cloned the repository using GitHub Desktop, so you should have the project on your local machine.\\
+
+2. *Open the Project:*
+   - Open the project in your preferred IDE as per the instructions in the readme.md.\\
+
+3. *Locate the Button Code:*
+   - Search for the code where the submit button is defined. This is typically found in the frontend code of the application. Depending on the technology stack used (e.g., HTML/CSS, React, Angular, etc.), it could be in a file like index.html, App.js, ButtonComponent.js, or a similar file.\\
+
+4. *Rename the Button:*
+   - You renamed the button to "Chin Tapak Dum Dum". If the button’s size became disproportionate, it’s likely due to styling issues.\\
+
+5. *Test the Application:*
+   - Run the application again to ensure that the button appears correctly and that there are no additional issues.\\
+
+6. *Commit Your Changes:*
+   - Once the button looks good, commit your changes. Use descriptive commit messages, for example: Fixed button styling after renaming.
+
+   bash
+   git add .
+   git commit -m "Fixed button styling after renaming to 'Chin Tapak Dum Dum'"
+   \\
+   
+7. *Push Your Changes:*
+   - Push your changes to your forked repository on GitHub.
+
+   bash
+   git push origin main
+   
+
+   (Replace main with the correct branch name if it's different.)\\
+   
+8. *Create a Pull Request:*
+   - Go to the original repository on GitHub (the one you cloned from).
+   - You should see an option to create a pull request from your forked repository. Follow the instructions to create a pull request with a title and description of what you have done.
+
+   Make sure to mention in the pull request that you have fixed the button styling after renaming it.
+
+
 \newpage
 
 \section*{Member 4: [Member 4 Name]}
