@@ -95,7 +95,6 @@ Installing GitHub Desktop is a straightforward process that begins with download
 
 \section*{Member 2: [Anuksha Sarkar]}
 \addcontentsline{toc}{section}{Member 2: [Anuksha Sarkar]}
-% Lab notebook content for Member 2 goes here
 \date{\today}
 \FloatBarrier 
 \begin{center}
@@ -121,7 +120,7 @@ This C program is designed to function as a simple calculator, allowing users to
 Key Components and Their Functions:\\
 
 1. Header Inclusion:
-   - $#include <stdio.h>$: This includes the standard input/output library, which provides functions like printf (for printing output) and scanf (for reading input).\\
+   - $\#include <stdio.h>$: This includes the standard input/output library, which provides functions like printf (for printing output) and scanf (for reading input).\\
 
 2. Main Function:
    - int main(): This is the entry point of the program. It's where the execution begins.\\
@@ -195,7 +194,6 @@ Other examples:
 
 \section*{Member 3: [Sananda Choudhury]}
 \addcontentsline{toc}{section}{Member 3: [Sananda Choudhury]}
-% Lab notebook content for Member 3 goes here
 \date{\today}
 \FloatBarrier 
 \begin{center}
@@ -203,7 +201,7 @@ Other examples:
 \end{center}
 \paragraph{}
 
-#Steps to Fix the Button and Create a Pull Request\\
+Steps to Fix the Button and Create a Pull Request\\
 
 1. *Clone the Repository:*
    - You’ve already cloned the repository using GitHub Desktop, so you should have the project on your local machine.\\
@@ -246,9 +244,152 @@ Other examples:
 
 \newpage
 
-\section*{Member 4: [Member 4 Name]}
-\addcontentsline{toc}{section}{Member 4: [Member 4 Name]}
-% Lab notebook content for Member 4 goes here
+\section*{Member 4: [Abir Mandal]}
+\addcontentsline{toc}{section}{Member 4: [Abir Mandal ]}
 \date{\today}
+
+\section*{\uline{Demonstrate proficiency in Git branching, merging, and conflict resolution.}}
+
+
+\subsection{Introduction}
+This document outlines the step-by-step process for Git branching, merging, and conflict resolution. The task was completed using the Git version control system, and the repository is hosted on GitHub.
+
+\subsection{Task Steps}
+
+\begin{enumerate}
+    \item Create a new repository on GitHub called \texttt{git-advanced}.
+    \item Clone the repository to your local machine:
+    \begin{verbatim}
+    git clone https://github.com/your-username/git-advanced.git
+    cd git-advanced
+    \end{verbatim}
+    
+    \item Create a new branch called \texttt{feature-1} and switch to it:
+    \begin{verbatim}
+    git checkout -b feature-1
+    \end{verbatim}
+    
+    \item Create a new file called \texttt{shared.txt} with the following content:
+    \begin{verbatim}
+    This is a shared file.
+    Line 1: Original text.
+    Line 2: Original text.
+    \end{verbatim}
+    
+    \item Stage and commit the file:
+    \begin{verbatim}
+    git add shared.txt
+    git commit -m "Add shared.txt with original content"
+    \end{verbatim}
+    
+    \item Push the branch to GitHub:
+    \begin{verbatim}
+    git push -u origin feature-1
+    \end{verbatim}
+    
+    \item Create a new branch called \texttt{feature-2} and switch to it:
+    \begin{verbatim}
+    git checkout -b feature-2
+    \end{verbatim}
+    
+    \item Checkout the \texttt{shared.txt} file from the main branch:
+    \begin{verbatim}
+    git checkout main -- shared.txt
+    \end{verbatim}
+    
+    \item Modify the file by changing the second line to:
+    \begin{verbatim}
+    Line 2: Modified text in feature-2.
+    \end{verbatim}
+    
+    \item Stage and commit the changes:
+    \begin{verbatim}
+    git add shared.txt
+    git commit -m "Modify Line 2 in shared.txt on feature-2"
+    \end{verbatim}
+    
+    \item Push the branch to GitHub:
+    \begin{verbatim}
+    git push -u origin feature-2
+    \end{verbatim}
+    
+    \item Switch back to \texttt{feature-1}:
+    \begin{verbatim}
+    git checkout feature-1
+    \end{verbatim}
+    
+    \item Modify the \texttt{shared.txt} file by changing the second line to:
+    \begin{verbatim}
+    Line 2: Modified text in feature-1.
+    \end{verbatim}
+    
+    \item Stage and commit the changes:
+    \begin{verbatim}
+    git add shared.txt
+    git commit -m "Modify Line 2 in shared.txt on feature-1"
+    \end{verbatim}
+    
+    \item Push the branch to GitHub:
+    \begin{verbatim}
+    git push origin feature-1
+    \end{verbatim}
+    
+    \item Merge \texttt{feature-1} into the main branch:
+    \begin{verbatim}
+    git checkout main
+    git merge feature-1
+    \end{verbatim}
+    
+    \item Merge \texttt{feature-2} into the main branch (this will introduce a conflict):
+    \begin{verbatim}
+    git merge feature-2
+    \end{verbatim}
+    
+    \item Resolve the conflict in \texttt{shared.txt} by editing the file:
+    \begin{verbatim}
+    <<<<<<< HEAD
+    Line 2: Modified text in feature-1.
+    =======
+    Line 2: Modified text in feature-2.
+    >>>>>>> feature-2
+    \end{verbatim}
+    After resolving the conflict, it may look like this:
+    \begin{verbatim}
+    Line 2: Modified text from both features.
+    \end{verbatim}
+    
+    Stage and commit the resolved file:
+    \begin{verbatim}
+    git add shared.txt
+    git commit -m "Resolve conflict between feature-1 and feature-2"
+    \end{verbatim}
+    
+    \item Push the updated main branch:
+    \begin{verbatim}
+    git push origin main
+    \end{verbatim}
+    
+    \item Delete the \texttt{feature-1} and \texttt{feature-2} branches:
+    \begin{verbatim}
+    git branch -d feature-1
+    git branch -d feature-2
+    git push origin --delete feature-1
+    git push origin --delete feature-2
+    \end{verbatim}
+\end{enumerate}
+
+\section{Screenshots}
+
+\subsection{GitHub Commit History and Branching}
+We have to include a screenshot of the GitHub repository showing the commit history and branching.
+
+\subsection{Git Log and Conflict Resolution}
+We have to include a screenshot of the local machine showing the Git log and the conflict resolution.
+
+
+\section{Write-up of Experience}
+Working with Git branching and merging was insightful. Handling multiple branches like \texttt{feature-1} and \texttt{feature-2} allowed me to work on different features in parallel. The merge conflict introduced in \texttt{shared.txt} was resolved by combining the changes from both branches. Overall, Git's functionality made the process of managing and resolving conflicts straightforward, though it requires careful attention to changes in files.
+
+Clear and meaningful commit messages are crucial to track progress and understand changes in the project.
 
 \end{document}
