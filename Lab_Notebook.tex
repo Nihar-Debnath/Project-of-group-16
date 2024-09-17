@@ -2,22 +2,54 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage[utf8]{inputenc}
 \usepackage{geometry}
 \usepackage{fancyhdr}
 \usepackage{enumitem}
 \usepackage{tocbibind} 
 \usepackage{ulem}
 \usepackage{placeins}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{biblatex}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{eso-pic}
+\usepackage{calc}
 \geometry{margin=1in}
 \pagestyle{fancy}
 \fancyhead[R]{\thepage}
 \fancyhf{}
 
+
+\newlength{\PageFrameTopMargin}
+\newlength{\PageFrameBottomMargin}
+\newlength{\PageFrameLeftMargin}
+\newlength{\PageFrameRightMargin}
+
+\setlength{\PageFrameTopMargin}{0.8cm}
+\setlength{\PageFrameBottomMargin}{0.8cm}
+\setlength{\PageFrameLeftMargin}{0.8cm}
+\setlength{\PageFrameRightMargin}{0.8cm}
+
+\makeatletter
+\newlength{\Page@FrameHeight}
+\newlength{\Page@FrameWidth}
+
+\AddToShipoutPicture{
+  \thinlines
+  \setlength{\Page@FrameHeight}{\paperheight-\PageFrameTopMargin-\PageFrameBottomMargin}
+  \setlength{\Page@FrameWidth}{\paperwidth-\PageFrameLeftMargin-\PageFrameRightMargin}
+  \put(\strip@pt\PageFrameLeftMargin,\strip@pt\PageFrameTopMargin){
+    \framebox(\strip@pt\Page@FrameWidth, \strip@pt\Page@FrameHeight){}}
+}
+\makeatother
+
 \title{
-    \vspace{-1in}\textbf{Lab Notebook} \\
+    \vspace{-0.5in}\textbf{Lab Notebook} \\
     \vspace{0.2in}\textbf{Semester:} II \\
     \textbf{Subject:} Software Tools and Technology-I Lab \\
-    \textbf{Subject Code:} SEBCA1191\\
+    \textbf{Group Number:} 16\\
     
     \vspace{0.5in}
     \includegraphics[width=0.5\textwidth]{logo.png}
@@ -25,7 +57,6 @@
 }
 
 \author{
-    \textbf{Group Number: 16} \\
     \textbf{Leader Name: Nihar Debnath}\\
     \textbf{Roll Number: 30001223008} \\
     \textbf{Department: B.C.A} \\
@@ -45,13 +76,17 @@
 \date{}
 
 \begin{document}
-
 \maketitle
 \newpage
 
 \section*{Assignment Details}
 \begin{itemize}
-    \item \textbf{Assignment:} Create a Git Repository Containing Lab Notebook in a LaTeX File
+    \item \textbf{Assignment-1:} Create a Git Repository Containing Lab Notebook in a LaTeX File
+    \item \textbf{Assignment-2:} Introduction to Latex
+    \item \textbf{Assignment-3:} Introduction to Git \& Github
+    \item \textbf{Assignment-4:} Calculator Program using C
+    \item \textbf{Assignment-5:} Converting a submit button to ”chin tapak dum dum”
+    \item \textbf{Assignment-6:} Demonstrate proficiency in Git branching, merging, and conflict resolution
 \end{itemize}
 
 \tableofcontents
@@ -59,8 +94,59 @@
 
 \section*{Leader: Nihar Debnath} 
 \addcontentsline{toc}{section}{Leader: Nihar Debnath}
-% Lab notebook content for Leader goes here
 \date{\today}
+
+\begin{center}
+    \textbf{1. Introduction to \LaTeX}\\
+\end{center}
+\LaTeX{} is a typesetting system that is widely used for producing scientific and technical documents. It is especially popular for creating documents with complex mathematical formulas, tables, and figures. Unlike word processors, \LaTeX{} provides greater control over document structure and presentation, making it a preferred tool in academia and industry.
+\begin{center}
+\textbf{2. Key Features of \LaTeX}\\
+\end{center}
+Some of the key features of \LaTeX{} include:\\
+\begin{itemize}
+    \item High-quality typesetting, especially for mathematical and technical content.
+    \item Separation of content and style, allowing users to focus on writing.
+    \item Automated table of contents, bibliography, and cross-references.
+    \item Supports a wide range of document types, including articles, books, reports, and presentations.
+    \item Extensible through packages for additional functionality, such as graphics, tables, and advanced formatting.
+\end{itemize}
+
+\begin{center}
+\textbf{3. Why Use \LaTeX?}\\
+\end{center}
+There are several reasons to use \LaTeX{}:\\
+\begin{itemize}
+    \item \textbf{Precision}: \LaTeX{} provides exceptional control over document structure and formatting, ensuring that everything looks just right.
+    \item \textbf{Mathematical Formulas}: It is the standard for creating documents that contain mathematical symbols and equations.
+    \item \textbf{Professional Quality}: Documents created with \LaTeX{} have a professional appearance, suitable for academic papers, theses, and books.
+    \item \textbf{Consistency}: Once a style is defined, it is applied consistently throughout the document.
+    \item \textbf{Collaboration}: Multiple users can work on the same document without formatting issues, as \LaTeX{} is plain text-based.
+\end{itemize}
+
+\begin{center}
+\textbf{4. Creating a \LaTeX{} Repository on GitHub using GitHub Desktop}
+\end{center}
+Version control is crucial for managing changes in documents, especially when working on complex projects. GitHub provides a platform for managing repositories, and GitHub Desktop simplifies working with GitHub.
+
+\begin{center}
+To create a \LaTeX{} repository on GitHub using GitHub Desktop:
+\end{center}
+\begin{enumerate}
+    \item \textbf{Install GitHub Desktop}: Download and install GitHub Desktop from \url{https://desktop.github.com/}.
+    \item \textbf{Create a GitHub Account}: If you don’t have one, sign up for GitHub at \url{https://github.com/}.
+    \item \textbf{Create a New Repository}: Open GitHub Desktop and click on \textit{File} $\rightarrow$ \textit{New Repository}. Name your repository, select the local path, and ensure the repository is initialized with a README.
+    \item \textbf{Clone the Repository}: After creating the repository on GitHub, use GitHub Desktop to clone the repository to your local machine by clicking on \textit{File} $\rightarrow$ \textit{Clone Repository}.
+    \item \textbf{Add Your \LaTeX{} Files}: Open the cloned folder on your computer and add your \LaTeX{} source files (.tex, .bib, etc.). 
+    \item \textbf{Commit and Push}: After adding your files, return to GitHub Desktop, write a commit message, and click on \textit{Commit to main}. Then click on \textit{Push origin} to upload your changes to GitHub.
+\end{enumerate}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{LaTeX_logo.png}
+    \caption{\LaTeX}
+    
+\end{figure}
+
 \newpage
 
 \section*{Member 1: Ishita Das}
@@ -93,8 +179,8 @@ Installing GitHub Desktop is a straightforward process that begins with download
 
 \newpage
 
-\section*{Member 2: [Anuksha Sarkar]}
-\addcontentsline{toc}{section}{Member 2: [Anuksha Sarkar]}
+\section*{Member 2: Anuksha Sarkar}
+\addcontentsline{toc}{section}{Member 2: Anuksha Sarkar}
 \date{\today}
 \FloatBarrier 
 \begin{center}
@@ -104,9 +190,8 @@ Installing GitHub Desktop is a straightforward process that begins with download
 \paragraph{}
 The primary purpose of a calculator program is to perform mathematical calculations efficiently and accurately.** It provides a user-friendly interface for entering numbers and operators, and then quickly calculates and displays the result. 
 
-Calculators can range from simple devices that handle basic arithmetic to more advanced ones capable of complex functions like trigonometry, statistics, and even programming. They are widely used in various fields, including education, science, engineering, and everyday life.
-
-
+Calculators can range from simple devices that handle basic arithmetic to more advanced ones capable of complex functions like trigonometry, statistics, and even programming. They are widely used in various fields, including education, science, engineering, and everyday life.\\
+\textbf{Code Link: }\href{https://github.com/Anuksha-2610/Anuksha/blob/main/cal.c}{Calculator Program}
 
 \begin{center}
 \section*{\uline{:Explain the code properly:}}
@@ -192,8 +277,8 @@ Other examples:
 
 \newpage
 
-\section*{Member 3: [Sananda Choudhury]}
-\addcontentsline{toc}{section}{Member 3: [Sananda Choudhury]}
+\section*{Member 3: Sananda Choudhury}
+\addcontentsline{toc}{section}{Member 3: Sananda Choudhury}
 \date{\today}
 \FloatBarrier 
 \begin{center}
@@ -244,17 +329,17 @@ Steps to Fix the Button and Create a Pull Request\\
 
 \newpage
 
-\section*{Member 4: [Abir Mandal]}
-\addcontentsline{toc}{section}{Member 4: [Abir Mandal ]}
+\section*{Member 4: Abir Mandal}
+\addcontentsline{toc}{section}{Member 4: Abir Mandal}
 \date{\today}
 
 \section*{\uline{Demonstrate proficiency in Git branching, merging, and conflict resolution.}}
 
 
-\subsection{Introduction}
+\textbf{1. Introduction:-}\\
 This document outlines the step-by-step process for Git branching, merging, and conflict resolution. The task was completed using the Git version control system, and the repository is hosted on GitHub.
-
-\subsection{Task Steps}
+\\
+\textbf{2. Task Steps:-}\\
 
 \begin{enumerate}
     \item Create a new repository on GitHub called \texttt{git-advanced}.
@@ -378,16 +463,16 @@ This document outlines the step-by-step process for Git branching, merging, and 
     \end{verbatim}
 \end{enumerate}
 
-\section{Screenshots}
+\textbf{3. Screenshots:-}\\
 
-\subsection{GitHub Commit History and Branching}
+\textbf{3.1 GitHub Commit History and Branching:-}\\
 We have to include a screenshot of the GitHub repository showing the commit history and branching.
 
-\subsection{Git Log and Conflict Resolution}
+\textbf{3.2 Git Log and Conflict Resolution:-}\\
 We have to include a screenshot of the local machine showing the Git log and the conflict resolution.
 
 
-\section{Write-up of Experience}
+\textbf{4. Write-up of Experience:-}\\
 Working with Git branching and merging was insightful. Handling multiple branches like \texttt{feature-1} and \texttt{feature-2} allowed me to work on different features in parallel. The merge conflict introduced in \texttt{shared.txt} was resolved by combining the changes from both branches. Overall, Git's functionality made the process of managing and resolving conflicts straightforward, though it requires careful attention to changes in files.
 
 Clear and meaningful commit messages are crucial to track progress and understand changes in the project.
